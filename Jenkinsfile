@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Check Out') {
       steps {
-        git(url: 'git@github.com:giladifrah/jenkins-ci-template.git', branch: 'master', poll: true)
+        git(url: 'git@github.com:giladifrah/jenkins-ci-template.git', branch: 'master', poll: true, credentialsId: 'giladgit-ssh')
       }
     }
 
