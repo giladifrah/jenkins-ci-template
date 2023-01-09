@@ -14,7 +14,8 @@ pipeline {
 
     stage('Build') {
       steps {
-        build 'cd src\\MyWindowsService nuget restore -source "https://api.nuget.org/v3/index.json"'
+        bat '''cd src\\MyWindowsService
+        nuget restore -source "https://api.nuget.org/v3/index.json"'''
       }
     }
 
